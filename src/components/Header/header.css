@@ -1,0 +1,23 @@
+:root {
+  --spacing: 0.25rem;
+}
+
+.header {
+  padding-block: calc(var(--spacing) * 8);
+
+  @media (width >= 40rem) {
+    padding-block: calc(var(--spacing) * 10);
+  }
+
+  @media (width >= 48rem) {
+    padding-block: calc(var(--spacing) * 11);
+  }
+
+  @media (width >= 64rem) {
+    padding-block: calc(var(--spacing) * 12);
+  }
+
+  @media (width >= 80rem) {
+    padding-block: calc(var(--spacing) * 14);
+  }
+}
