@@ -3,11 +3,17 @@ import { PostsList } from '../components/PostsList';
 import { SpinLoader } from '../components/SpinLoader';
 import { Container } from '../components/Container';
 import { Header } from '../components/Header';
+import { PostFeatured } from '../components/PostFeatured/indedx';
 
 export default async function HomePage() {
   return (
     <Container>
       <Header />
+
+      <Suspense fallback={<SpinLoader />}>
+        <PostFeatured />
+      </Suspense>
+
       <Suspense fallback={<SpinLoader />}>
         <PostsList />
       </Suspense>

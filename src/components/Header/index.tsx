@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import './header.css';
+import Link from 'next/link';
 
 export function Header() {
   return (
@@ -15,7 +16,7 @@ export function Header() {
           'header',
         )}
       >
-        <a href='#'>Vitor Blog</a>
+        <Link href='#'>Vitor Blog</Link>
       </h1>
     </header>
   );
