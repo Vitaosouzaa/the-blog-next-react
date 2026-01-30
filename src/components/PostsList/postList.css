@@ -1,0 +1,10 @@
+:root {
+  --spacing: 0.25rem;
+}
+
+.space {
+  margin-bottom: calc(var(--spacing) * 16);
+  @media (width >= 80rem) {
+    margin-top: calc(var(--spacing) * 16);
+  }
+}

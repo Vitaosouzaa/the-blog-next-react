@@ -1,10 +1,15 @@
 import type { Metadata } from 'next';
-import { ThemeProvider } from '../components/ThemeProvider';
 
 import './globals.css';
+import { Container } from '../components/Container';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: "Vitor's Blog",
+  title: {
+    default: 'The Personal Blog',
+    template: '%s | The Personal Blog',
+  },
   description: 'Descrição do meu blog pessoal',
 };
 
@@ -16,7 +21,13 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang='pt-BR'>
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <Container>
+          <Header />
+
+          {children}
+
+          <Footer />
+        </Container>
       </body>
     </html>
   );
